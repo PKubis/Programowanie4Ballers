@@ -1,0 +1,38 @@
+﻿@model IEnumerable<_4Ballers.Models.OrderItem>
+
+<h2>Koszyk</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <tr>
+            <th>Produkt</th>
+            <th>Rozmiar</th>
+            <th>Ilość</th>
+            <th>Cena</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Product.Name</td>
+                <td>@item.Size</td>
+                <td>@item.Quantity</td>
+                <td>@item.TotalPrice</td>
+                <td>
+                    <form asp-controller="Orders" asp-action="RemoveFromBasket" method="post">
+                        <input type="hidden" name="OrderItemId" value="@item.Id" />
+                        <button type="submit" class="btn btn-danger">Usuń</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <p>Razem: @Model.Sum(item => item.TotalPrice) zł</p>
+    <!-- Tu można dodać przycisk do finalizacji zamówienia -->
+}
+else
+{
+    <p>Twój koszyk jest pusty.</p>
+}

@@ -1,0 +1,30 @@
+﻿
+
+@model IEnumerable<_4Ballers.Models.Product>
+
+<h2>Produkty</h2>
+
+<table>
+    <!-- ... pozostała część tabeli ... -->
+    @foreach (var product in Model)
+    {
+        <tr>
+            <!-- ... pozostałe kolumny ... -->
+            <td>
+                <a href="@Url.Action("Details", "Products", new { id = product.Id })">Szczegóły</a>
+                @if ((bool)ViewData["IsAdmin"])
+                {
+                    <text> |
+                    <a href="@Url.Action("Edit", "Products", new { id = product.Id })">Edytuj</a> |
+                    <a href="@Url.Action("Delete", "Products", new { id = product.Id })">Usuń</a>
+                    </text>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+@if ((bool)ViewData["IsAdmin"])
+{
+    <a href="@Url.Action("Create", "Products")">Dodaj nowy produkt</a>
+}
