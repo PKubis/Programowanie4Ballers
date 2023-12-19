@@ -85,7 +85,7 @@ body {
     width: 48%;
 }
 
-.form-group {
+.form-group{
     margin-bottom: 15px;
 }
 .row {
@@ -107,3 +107,23 @@ body {
         max-height: 150px;
         object-fit: contain;
     }
+.edit-form {
+    max-width: 500px; /* Ustaw maksymaln¹ szerokoœæ formularza */
+    margin: 0; /* Usuñ marginesy */
+}
+
+.form-group-crud {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Odstêpy miêdzy grupami formularzy */
+}
+
+.form-label {
+    flex: 0 0 30%; /* Szerokoœæ etykiet */
+    margin-right: 5px; /* Odstêp miêdzy etykiet¹ a polem wprowadzania */
+    text-align: right; /* Wyrównanie tekstu etykiet do prawej */
+}
+
+.form-control {
+    flex: 0 0 50%; /* Zmniejszona szerokoœæ pól wprowadzania */
+}

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OvynK9a/rPKUehXPTbyGKq8LF40JO8Rcy09Yck7kpzQ=",
+  "Hash": "USPRoxHPPGT9TlHKeiB5SPtm5pH/iziubDH/sULPgKU=",
   "Source": "4Ballers",
   "BasePath": "_content/4Ballers",
   "Mode": "Default",
@@ -1970,6 +1970,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Kobe.png"
+    },
+    {
+      "Identity": "C:\\Users\\piotr\\Desktop\\repo\\C-Projekt-main\\wwwroot\\images\\kosz.jpg",
+      "SourceId": "4Ballers",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\piotr\\Desktop\\repo\\C-Projekt-main\\wwwroot\\",
+      "BasePath": "_content/4Ballers",
+      "RelativePath": "images/kosz.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kosz.jpg"
     },
     {
       "Identity": "C:\\Users\\piotr\\Desktop\\repo\\C-Projekt-main\\wwwroot\\images\\LACCourt.jpg",

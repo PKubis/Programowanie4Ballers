@@ -17,16 +17,18 @@ namespace _4Ballers.Controllers
             _context = context;
             _userManager = userManager;
         }
-
+        [Authorize]
         // Metoda Index wyświetlająca listę produktów
         public async Task<IActionResult> Index()
         {
             var products = _context.Products.ToList();
             var user = await _userManager.GetUserAsync(User);
-            bool isAdmin = user?.Email == "piotrkubis1989@gmail.com";
+            bool isAdmin = user != null && user.Email == "piotrkubis1989@gmail.com";
             ViewData["IsAdmin"] = isAdmin; // Przekazanie flagi do widoku
+
             return View("~/Views/Private/Shoes.cshtml", products);
         }
+
 
         // Metoda Details do wyświetlania szczegółów produktu
         public IActionResult Details(int id)
@@ -36,8 +38,17 @@ namespace _4Ballers.Controllers
             {
                 return NotFound();
             }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                // Przekieruj do strony logowania
+                return Redirect("~/Identity/Account/Login");
+            }
+
             return View(product);
         }
+
+
 
         // GET: Metoda do wyświetlania formularza dodawania nowego produktu
         [Authorize]

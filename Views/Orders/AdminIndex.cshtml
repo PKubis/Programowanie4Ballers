@@ -1,26 +1,26 @@
 ﻿@model IEnumerable<_4Ballers.Models.OrderItem>
 
-<h2>Koszyk (widok admina)</h2>
+<h2>Koszyk <span style="color:orange">Admina</span></h2>
 
 <table class="table">
     <tr>
-        <th>Logo</th>
-        <th>Produkt</th>
-        <th>Rozmiar</th>
-        <th>Ilość</th>
-        <th>Cena</th>
-        <th>Kupujący</th>
-        <th>Akcje</th>
+        <th style="color:white">Logo</th>
+        <th style="color:orange">Produkt</th>
+        <th style="color:white">Rozmiar</th>
+        <th style="color:orange">Ilość</th>
+        <th style="color:white">Cena</th>
+        <th style="color:orange">Kupujący</th>
+        <th style="color:white">Akcje</th>
     </tr>
     @foreach (var item in Model)
     {
         <tr>
             <td><img src="@Url.Content($"~/images/{item.Product.ImageUrl}")" alt="@item.Product.Name" style="width:50px;" /></td>
-            <td>@item.Product.Name</td>
-            <td>@item.Size</td>
-            <td>@item.Quantity</td>
-            <td>@item.TotalPrice zł</td>
-            <td>@item.User.Email</td> <!-- Wyświetl e-mail użytkownika -->
+            <td style="color:White">@item.Product.Name</td>
+            <td style="color:White">@item.Size</td>
+            <td style="color:White">@item.Quantity</td>
+            <td style="color:White">@item.TotalPrice zł</td>
+            <td style="color:aqua">@item.User.Email</td> 
             <td>
                 <form asp-controller="Orders" asp-action="DeleteOrder" method="post">
                     <input type="hidden" name="OrderId" value="@item.Id" />

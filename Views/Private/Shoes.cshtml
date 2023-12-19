@@ -18,10 +18,12 @@
         @foreach (var shoe in Model)
         {
             <div class="col-md-2-4 shoe-item">
-                <img src="@Url.Content("~/images/" + shoe.ImageUrl)" alt="@shoe.Name" style="width:100%;" />
+                <!-- Link do szczegółów produktu za pomocą obrazu -->
+                <a href="@Url.Action("Details", "Products", new { id = shoe.Id })">
+                    <img src="@Url.Content("~/images/" + shoe.ImageUrl)" alt="@shoe.Name" style="width:100%;" />
+                </a>
                 <h4>@shoe.Name</h4>
-                <p>Cena: @shoe.Price zł</p>
-                <a href="@Url.Action("Details", "Products", new { id = shoe.Id })" class="btn btn-info">Szczegóły</a>
+                <p style="color:orange">Cena: @shoe.Price zł</p>
                 @if (isAdmin)
                 {
                     <a href="@Url.Action("Edit", "Products", new { id = shoe.Id })" class="btn btn-warning">Edytuj</a>
@@ -35,15 +37,3 @@ else
 {
     <p>Brak produktów do wyświetlenia.</p>
 }
-
-<style>
-    .shoe-item {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-        .shoe-item img {
-            max-height: 150px;
-            object-fit: contain;
-        }
-</style>

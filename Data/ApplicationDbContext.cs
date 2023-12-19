@@ -14,7 +14,13 @@ namespace _4Ballers.Data
 
         public DbSet<Product> Products { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            // Dodaj tę linię do wywołania metody seedującej
+            modelBuilder.Seed();
+        }
 
     }
 }

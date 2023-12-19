@@ -1,27 +1,28 @@
 ﻿@model _4Ballers.Models.Product
 
-<h2>Edytuj Produkt</h2>
+<h2>Edytuj<span style="color: orange"> Produkt</span></h2>
 
-<form asp-action="Edit" asp-route-id="@Model.Id">
-    <div>
-        <label asp-for="Name">Nazwa:</label>
-        <input asp-for="Name" />
+<form asp-action="Edit" asp-route-id="@Model.Id" class="edit-form">
+    <div class="form-group-crud">
+        <label asp-for="Name" class="form-label-crud" >Nazwa:</label>
+        <input asp-for="Name" class="form-control-crud" />
     </div>
-    <div>
-        <label asp-for="Brand">Marka:</label>
-        <input asp-for="Brand" />
+    <div class="form-group-crud">
+        <label asp-for="Brand" class="form-label-crud" style="color:orange">Marka:</label>
+        <input asp-for="Brand" class="form-control-crud" />
     </div>
-    <div>
-        <label asp-for="Price">Cena:</label>
-        <input asp-for="Price" />
+    <div class="form-group-crud">
+        <label asp-for="Price" class="form-label-crud">Cena:</label>
+        <input asp-for="Price" class="form-control-crud" />
     </div>
-    <div>
-        <label asp-for="ImageUrl">URL Obrazka:</label>
-        <input asp-for="ImageUrl" />
+    <div class="form-group-crud">
+        <label asp-for="ImageUrl" class="form-label-crud" style="color:orange">Obraz:</label>
+        <input asp-for="ImageUrl" class="form-control-crud" />
     </div>
-    <div>
-        <label asp-for="Description">Opis:</label>
-        <textarea asp-for="Description"></textarea>
+    <div class="form-group-crud">
+        <label asp-for="Description" class="form-label-crud">Opis:</label>
+        <textarea asp-for="Description" class="form-control-crud"></textarea>
     </div>
-    <button type="submit">Zapisz zmiany</button>
+    <button type="submit" class="btn btn-primary">Zapisz zmiany</button>
 </form>
+

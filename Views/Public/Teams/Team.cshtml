@@ -11,20 +11,10 @@
     @foreach  (var team in Model.Where(t => t.Id >= 1 && t.Id <= 5))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }
@@ -39,20 +29,10 @@
     @foreach (var team in Model.Where(t => t.Id >= 6 && t.Id <= 10))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }
@@ -66,20 +46,10 @@
     @foreach (var team in Model.Where(t => t.Id >= 11 && t.Id <= 15))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }
@@ -93,20 +63,10 @@
     @foreach (var team in Model.Where(t => t.Id >= 16 && t.Id <= 20))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }
@@ -120,20 +80,10 @@
     @foreach (var team in Model.Where(t => t.Id >= 21 && t.Id <= 25))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }
@@ -147,20 +97,10 @@
     @foreach (var team in Model.Where(t => t.Id >= 26 && t.Id <= 30))
     {
         <div class="col-md-2 text-center">
-            @if (User.Identity.IsAuthenticated)
-            {
-                <!-- Jeśli użytkownik jest zalogowany, dodaj link do informacji o drużynie -->
-                <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
-            else
-            {
-                <!-- Jeśli użytkownik nie jest zalogowany, dodaj link do strony logowania -->
-                <a href="@Url.Action("Login", "Account")">
-                    <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
-                </a>
-            }
+            <!-- Link do akcji TeamDetails dla każdej drużyny -->
+            <a href="@Url.Action("TeamDetails", "Public", new { id = team.Id })">
+                <img src="@Url.Content(team.ImageUrl)" alt="@team.Name" class="img-fluid team-image">
+            </a>
             <p class="my-2">@team.Name</p>
         </div>
     }

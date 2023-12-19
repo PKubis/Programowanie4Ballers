@@ -5,13 +5,13 @@
     var isAdmin = User.Identity.IsAuthenticated && (UserManager.GetUserAsync(User).Result?.Email == "piotrkubis1989@gmail.com");
 }
 
-<h2>Szczegóły Produktu</h2>
+<h2>Szczegóły <span style="color:orange">Produktu</span></h2>
 
 <div>
     <h3>@Model.Name</h3>
-    <p>Marka: @Model.Brand</p>
+    <p style="color:orange">Marka: @Model.Brand</p>
     <p>Cena: @Model.Price zł</p>
-    <p>Opis: @Model.Description</p>
+    <p style="color:orange">Opis: @Model.Description</p>
     <img src="@Url.Content("~/images/" + Model.ImageUrl)" alt="@Model.Name" style="max-width:300px; height:auto; object-fit:contain;" />
 
     <form asp-controller="Orders" asp-action="AddToBasket" method="post">

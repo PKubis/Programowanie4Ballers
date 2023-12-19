@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using _4Ballers.Data; // Upewnij się, że masz tę dyrektywę using
 using System.Linq; // Potrzebne do korzystania z metody .ToList()
 
-[Authorize]
+
 public class PrivateController : Controller
 {
     private readonly ApplicationDbContext _context;

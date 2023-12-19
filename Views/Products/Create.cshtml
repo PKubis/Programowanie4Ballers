@@ -8,30 +8,30 @@
 
 @if (isAdmin)
 {
-    <h2>Dodaj Produkt</h2>
+    <h2>Dodaj<span style="color: orange"> Produkt</span></h2>
 
-    <form asp-action="Create">
-        <!-- Pola formularza -->
-        <div>
-            <label asp-for="Name">Nazwa:</label>
-            <input asp-for="Name" />
+    <form asp-action="Create" class="crud-form">
+        <div class="form-group-crud">
+            <label asp-for="Name" class="form-label-crud">Nazwa:</label>
+            <input asp-for="Name" class="form-control-crud" />
         </div>
-        <div>
-            <label asp-for="Brand">Marka:</label>
-            <input asp-for="Brand" />
+        <div class="form-group-crud">
+            <label asp-for="Brand" class="form-label-crud" style="color:orange">Marka:</label>
+            <input asp-for="Brand" class="form-control-crud" />
         </div>
-        <div>
-            <label asp-for="Price">Cena:</label>
-            <input asp-for="Price" />
+        <div class="form-group-crud">
+            <label asp-for="Price" class="form-label-crud">Cena:</label>
+            <input asp-for="Price" class="form-control-crud" />
         </div>
-        <div>
-            <label asp-for="ImageUrl">URL Obrazka:</label>
-            <input asp-for="ImageUrl" placeholder="np. jordan1.jpg" />
+        <div class="form-group-crud">
+            <label asp-for="ImageUrl" class="form-label-crud" style="color:orange">Obraz:</label>
+            <input asp-for="ImageUrl" class="form-control-crud" placeholder="np. jordan1.jpg" />
         </div>
-        <div>
-            <label asp-for="Description">Opis:</label>
-            <textarea asp-for="Description"></textarea>
+        <div class="form-group-crud">
+            <label asp-for="Description" class="form-label-crud">Opis:</label>
+            <textarea asp-for="Description" class="form-control-crud"></textarea>
         </div>
-        <button type="submit">Dodaj</button>
+        <button type="submit" class="btn btn-primary">Dodaj</button>
     </form>
 }
+
