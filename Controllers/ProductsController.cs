@@ -77,7 +77,7 @@ namespace _4Ballers.Controllers
             return View(product);
         }
 
-        // GET: Metoda do wyświetlania formularza edycji produktu
+        
         [Authorize]
         public IActionResult Edit(int id)
         {
@@ -89,7 +89,7 @@ namespace _4Ballers.Controllers
             return View(product);
         }
 
-        // POST: Metoda do przetwarzania danych formularza edycji produktu
+        
         [HttpPost]
         [Authorize]
         public IActionResult Edit(int id, Product product)
@@ -103,7 +103,7 @@ namespace _4Ballers.Controllers
             return View(product);
         }
 
-        // GET: Metoda do wyświetlania formularza usuwania produktu
+        
         [Authorize]
         public IActionResult Delete(int id)
         {

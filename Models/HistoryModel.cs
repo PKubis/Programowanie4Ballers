@@ -12,15 +12,15 @@ namespace _4Ballers.Pages
 
         public void OnGet()
         {
-            // Kod obsługi dla żądania GET
+            
         }
 
         public void OnPost()
         {
-            // Kod obsługi dla żądania POST
+          
             if (FileInput != null && FileInput.Length > 0)
             {
-                // Tutaj możesz przetworzyć przesłane zdjęcie, np. zapisać je na dysku
+                
                 var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", FileInput.FileName);
 
                 using (var stream = new FileStream(filePath, FileMode.Create))
@@ -28,7 +28,7 @@ namespace _4Ballers.Pages
                     FileInput.CopyTo(stream);
                 }
 
-                // Pamiętaj o sprawdzeniu typu pliku, wielkości itp., aby zabezpieczyć aplikację
+               
             }
         }
     }

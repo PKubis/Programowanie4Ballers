@@ -13,7 +13,7 @@ namespace _4Ballers.Controllers
     {
         private readonly TeamInfoProvider _teamInfoProvider;
         private readonly IConfiguration _configuration;
-        // Inject ITeamInfoProvider through the constructor
+        
         public PublicController(TeamInfoProvider teamInfoProvider, IConfiguration configuration)
         {
             _teamInfoProvider = teamInfoProvider;

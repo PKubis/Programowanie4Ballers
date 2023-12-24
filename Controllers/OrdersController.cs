@@ -23,16 +23,16 @@ public class OrdersController : Controller
 
         var orderItems = _context.OrderItems
                                  .Include(oi => oi.Product)
-                                 .Include(oi => oi.User) // Załaduj informacje o użytkowniku
+                                 .Include(oi => oi.User) 
                                  .ToList();
 
         if (isAdmin)
         {
-            // Jeśli jesteś adminem, zwróć wszystkie pozycje zamówień
-            return View("AdminIndex", orderItems); // Użyj innego widoku dla admina
+            
+            return View("AdminIndex", orderItems); 
         }
 
-        // Filtrowanie zamówień dla zalogowanego użytkownika
+       
         orderItems = orderItems.Where(oi => oi.UserId == user.Id).ToList();
 
         return View(orderItems);
@@ -92,8 +92,7 @@ public class OrdersController : Controller
     {
         var user = await _userManager.GetUserAsync(User);
         var isAdmin = user?.Email == "piotrkubis1989@gmail.com";
-        if (!isAdmin) return Forbid(); // Sprawdź, czy użytkownik jest administratorem
-
+        if (!isAdmin) return Forbid(); 
         var orderItem = await _context.OrderItems.FindAsync(orderId);
         if (orderItem != null)
         {

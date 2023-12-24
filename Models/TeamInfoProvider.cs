@@ -371,7 +371,7 @@
             _teams[27].TeamImageUrl = "/images/GrizllyCourt.jpg";
             _teams[28].TeamImageUrl = "/images/PelicanCourt.jpg";
             _teams[29].TeamImageUrl = "/images/SpursCourt.jpg";
-            // Ustaw ścieżki dla pozostałych drużyn
+           
         }
 
         public TeamInfo GetTeamInfo(int teamId)

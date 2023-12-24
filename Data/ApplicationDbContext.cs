@@ -1,7 +1,7 @@
 ﻿using _4Ballers.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Linq; // Dodaj tę dyrektywę using
+using System.Linq; 
 
 namespace _4Ballers.Data
 {
@@ -18,7 +18,7 @@ namespace _4Ballers.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // Dodaj tę linię do wywołania metody seedującej
+            
             modelBuilder.Seed();
         }
 

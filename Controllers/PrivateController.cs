@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
-using _4Ballers.Data; // Upewnij się, że masz tę dyrektywę using
-using System.Linq; // Potrzebne do korzystania z metody .ToList()
+using _4Ballers.Data; 
+using System.Linq; 
 
 
 public class PrivateController : Controller

@@ -8,7 +8,7 @@ namespace _4Ballers.Data
         public static void Seed(this ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Product>().HasData(
-                // Tutaj dodajesz produkty, które chcesz zaseedować
+                
                 new Product { Id = 1, Name = "Jordan I Mid", Brand = "Nike", Price = 599.99M, ImageUrl = "jordan1.png", Description = "Pierwsze z butów zaprojektowane dla Michaela Jordana w 1985 roku" },
                 new Product { Id = 2, Name = "Jordan II", Brand = "Nike", Price = 929.99M, ImageUrl = "jordan2.jpg", Description = "Michale zagrał w meczu gwiazd, zdobył koronę najlepszego strzelca ligi przekraczając granicę 3000 punktów. Ponadto wygrał konkurs wsadów oraz w dziewięciu kolejnych spotkaniach zdobył 40 i więcej punktów." },
                new Product { Id = 3, Name = "Jordan IV", Brand = "Nike", Price = 1863.37M, ImageUrl = "jordan4.jpg", Description = " Michael ponownie zagrał w meczu gwiazd, trzeci raz z rzędu zdobył tytuł najlepszego strzelca ligi. Jego powietrzne akrobacje oraz słynny jordanowski język stały się jego znakiem firmowym." },
