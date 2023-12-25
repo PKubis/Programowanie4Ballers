@@ -1,1 +1,1 @@
-web: dotnet run --project ./_4Ballers.csproj
+web: dotnet run --project ./4Ballers.csproj
